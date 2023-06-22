@@ -1,22 +1,24 @@
 "use client";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import image1 from "@/public/1873.png";
-import image2 from "@/public/1876.png";
-import image3 from "@/public/3969 1.png";
-import image4 from "@/public/1305448.jpg";
-
+import image1 from "@/public/Suri_There_is_no_pair_real_on_the_virtual_for_Fu_view_book.jpg";
+import image2 from "@/public/Suri_There_is_no_pair_real_on_the_virtual_for_Fu_view_book_1.jpg";
+import image3 from "@/public/Suri_There_is_no_pair_real_on_the_virtual_for_Fu_view_book._The_96251220-2d7a-48b8-893b-7c5820e59679.jpeg";
+import image4 from "@/public/image-4.jpeg";
+import image5 from "@/public/image-5.jpeg";
+import image6 from "@/public/image-6.jpeg";
+import image7 from "@/public/image-7.jpeg";
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 
-const imgs = [image1, image2, image3, image4];
+const imgs = [image1, image2, image3, image4, image5, image6, image7];
 export default function Home() {
   const [index, setIndex] = useState(0);
   return (
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
       <main className=" bg-black">
-        <div className="lg:px-24 bg-black h-[100vh] py-10">
-          <div className="h-[79vh] mx-auto flex flex-col mx-w-7xl justify-center items-center object-fill">
+        <div className="lg:px-52 bg-black h-[100vh] py-10">
+          <div className="h-[80vh] mx-auto flex flex-col mx-w-7xl justify-center items-center object-cover">
             <div className="relative overflow-hidden">
               <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
                 {imgs.map((image) => (
@@ -24,7 +26,7 @@ export default function Home() {
                     src={image}
                     key="image"
                     alt="images"
-                    className="h-full aspect-video object-cover"
+                    className="h-full aspect-[3/2] object-cover"
                   />
                 ))}
               </motion.div>
@@ -57,7 +59,7 @@ export default function Home() {
                 )}
               </AnimatePresence>
             </div>
-            <div className="flex inset-x-0 h-20 absolute bottom-2 justify-center overflow-hidden">
+            <div className="flex inset-x-0 h-14 absolute bottom-2 justify-center overflow-hidden">
               <motion.div
                 animate={{ x: `-${index * 100}%` }}
                 className="flex aspect-[3/2]"
@@ -71,8 +73,7 @@ export default function Home() {
                     <Image
                       src={image}
                       alt="images"
-                      className={`h-full  object-cover w-auto ${
-                        i !== index ? "aspect-[3/2]" : "aspect-[3/1]"
+                      className={`h-full  object-cover w-auto
                       }`}
                     />
                   </motion.button>
